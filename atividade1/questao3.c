@@ -18,16 +18,15 @@ Execute: ./questao3
 #define G_DE_MARTE 3.72
 
 int main(void)
-{
+{ // Bloco de declaração e atribuição de variáveis
     int i = 0;
     float massa_dos_tripulantes[] = {70, 72, 74, 76, 78, 80, 82, 84, 86, 88};
     float peso_dos_tripulantes_em_marte[10];
-
+    // Bloco de iteração e cálculo do peso em Newtons
     for (i = 0; i < 10; i++)
     {
         peso_dos_tripulantes_em_marte[i] = massa_dos_tripulantes[i] * G_DE_MARTE;
-        printf("Tripulante %d, Massa na Terra: %.2f Kg, Peso em Marte: %.2f N\n", i + 1,
-               massa_dos_tripulantes[i], peso_dos_tripulantes_em_marte[i]);
+        printf("Tripulante %d, Massa na Terra: %.2f Kg, Peso em Marte: %.2f N\n", i + 1, massa_dos_tripulantes[i], peso_dos_tripulantes_em_marte[i]);
     }
     return 0;
 }

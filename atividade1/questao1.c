@@ -3,9 +3,9 @@ UNIVERSIDADE FEDERAL DE SERGIPE
 Programação imperativa
 Aluno: Mateus Figueiredo Pereira
 
-Questão 1: Escreva  um  programa  que  calcule  o  discriminante  (delta),  
-as  coordenadas  do  vértice  e  as raízes para a equação de segundo grau 
-a seguir: 2x² + 9x + 10 = 0. 
+Questão 1: Escreva  um  programa  que  calcule  o  discriminante  (delta),
+as  coordenadas  do  vértice  e  as raízes para a equação de segundo grau
+a seguir: 2x² + 9x + 10 = 0.
 
 Compile: gcc questao1.c -o questao1 -lm
 Execute: ./questao1
@@ -14,21 +14,14 @@ Execute: ./questao1
 #include <math.h>
 
 int main(void)
-{
-    int a = 2;
-    int b = 9;
-    int c = 10;
-
-    float delta = 0;
-    float x_i = 0;
-    float x_ii = 0;
-    float x_v = 0;
-    float y_v = 0;
-
+{ // Bloco de declaração e atribuição de variáveis
+    int a = 2, b = 9, c = 10;
+    float delta = 0, x_i = 0, x_ii = 0, x_v = 0, y_v = 0;
+    // Blocos de cálculo do delta e das coordenadas do vértice
     delta = (float)(b * b) - (4 * a * c);
     x_v = (float)-b / (2 * a);
     y_v = (float)-delta / (4 * a);
-
+    // Bloco condicional pelo número de raízes
     if (delta < 0)
     {
         printf("Não existem raízes reais\n");
